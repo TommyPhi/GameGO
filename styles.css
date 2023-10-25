@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap');
+@font-face {
+    font-family: akira;
+    src: url(akira.otf);
+}
+body {
+    margin: 0;
+}
+
+.brand-logo {
+    font-family: akira;
+    font-size: 20pt;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+#brand-logo-go {
+    color: rgb(17, 182, 17);
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 0;
+    width: 55%;
+    justify-content: center;
+}
+
+.tabs a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tabs a li {
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    background-color: rgb(30, 30, 30);
+    padding: 16px 0 0 0;
+}   
+
+nav ul {
+    padding: 0; 
+}
+
+nav ul li {
+    float: left;
+    list-style: none;
+    margin: 10px 20px 5px 20px;
+    font-family: Poppins;
+    color: rgb(213, 213, 213);
+}
+
+nav ul a:hover {
+    background-color: rgb(50, 49, 49);
+    transition: all 0.2s;
+}
+
+nav ul li:hover {
+    color: rgb(255, 255, 255);
+    transition: all 0.2s;
+}
+
+nav ul li:active {
+    color: #474747;
+    transition: all 0.2s;
+}
+
+nav ul a:active {
+    background-color: #fff;
+    transition: all 0.2s;
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+.nav-wrapper a {
+    text-decoration: none;
+}
+
+.nav-wrapper button {
+    padding: 15px;
+    border-radius: 300px;
+    border: 1px white solid;
+    background: none;
+}
+
+#nav-search-bar {
+    border-radius: 5px;
+    font-family: Poppins;
+    padding: 5px 5px 5px 35px;
+    width: 29rem;
+    background: url(icons/magnifying-glass-solid.svg) no-repeat 0.8% 45% white;
+    background-size: 2.5%;
+}
+
+#cart-icon {
+    width: 23px;  
+    background: rgb(63, 63, 63);
+    padding: 7px;
+    height: auto;
+    border-radius: 5px;
+}
+
+#user-icon {
+    width: 20px;
+    height: auto;
+    background: rgb(63, 63, 63);
+    border-radius: 5px;
+    padding: 7px;
+}
+
+#user-icon:hover {
+    background: rgb(115, 115, 115);
+    transition: all 0.5s;
+}
+
+#cart-icon:hover {
+    background: rgb(115, 115, 115);
+    transition: all 0.5s;
+}
+
+.nav-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-btns p {
+    margin: 0;
+    color: white;
+    font-family: Poppins;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.nav-btns p:hover {
+    color: rgb(17, 182, 17);
+    transition: all 0.5s;
+}
