@@ -7,35 +7,52 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header id="header">
         <nav>
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo">Game<span id="brand-logo-go">Go</span></a>
-                <form action="#">
-                    <div>
-                        <input id="nav-search-bar" type="text" placeholder="Search games, consoles & more" name="search" autocomplete="off">
-                    </div>
-                </form>
-                <a href="#"><div class="nav-btns">
-                    <img id="user-icon" src="assets/icons/user-icon.png">
-                    <p>User</p>
-                </div></a>
-                <a href="#"><div class="nav-btns">
-                    <img id="cart-icon" src="assets/icons/cart_icon.png">
-                    <p>Cart</p>
-                </div></a>
+            <div id="sidenav" class="side-nav">
+                <div class="top-sidenav">
+                    <p class="side-nav-text">Menu</p>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                </div>
+                <h1>Shop by Category</h1>
+                <div class="side-nav-links">
+                    <a href="#">Video Games</a>
+                    <a href="#">Consoles & Hardware</a>
+                    <a href="#">Toys & Collectibles</a>
+                    <a href="#">Deals</a>
+                    <a href="#">GameGo START</a>
+                </div>
             </div>
-            <ul class="tabs">
-                <a href="#"><li>Games</li></a>
-                <a href="#"><li>Games</li></a>
-                <a href="#"><li>Games</li></a>
-                <a href="#"><li>Games</li></a>
-                <a href="#"><li>Games</li></a>
-            </ul>
+        </nav>
+        <nav>
+            <div class="main-nav">
+                <div class="nav-wrapper">
+                    <span class="side-nav-btn" onclick="openNav()">&#9776;</span>
+                    <a href="#" class="brand-logo">Game<span id="brand-logo-go">Go</span></a>
+                    <form action="#">
+                        <div>
+                            <input id="nav-search-bar" type="text" placeholder="Search games, consoles & more" name="search" autocomplete="off">
+                        </div>
+                    </form>
+                    <div class="nav-btns">
+                        <img id="user-icon" src="assets/icons/user-icon.png">
+                        <p>User</p>
+                        <img id="cart-icon" src="assets/icons/cart_icon.png">
+                        <p>Cart</p>
+                    </div>
+                </div>
+                <ul class="tabs">
+                    <a href="#"><li>WHAT'S NEW?</li></a>
+                    <a href="#"><li>TRENDING NOW</li></a>
+                    <a href="#"><li>DEALS OF THE DAY</li></a>
+                    <a href="#"><li>CREATOR SPOTLIGHT</li></a>
+                    <a href="#"><li>GAMESGO START</li></a>
+                </ul>
+            </div>
         </nav>
     </header>
 
-    <main>
+    <main id="main">
         <div class="hero-image">
             <div class="hero-video">
                 <video autoplay="" id="heroVideo" loop="" muted="" poster="assets/images/sm2-hero.jpeg">
@@ -55,33 +72,33 @@
             <div class="footer-section">
                 <h3>HELP</h3>
                 <ul>
-                    <li>Frequently Asked Questions</li>
-                    <li>Order Status</li>
-                    <li>GameGO Promotion Card</li>
-                    <li>Recall Notices</li>
-                    <li>Returns</li>
-                    <li>Feedback</li>
+                    <li><a href="#">Frequently Asked Questions</a></li>
+                    <li><a href="#">Order Status</a></li>
+                    <li><a href="#">GameGO Promotion Card</a></li>
+                    <li><a href="#">Recall Notices</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Feedback</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h3>LEGAL & PRIVACY</h3>
                 <ul>
-                    <li>CA Privacy Acts</li>
-                    <li>CA Transparency Act</li>
-                    <li>Conditions of Use</li>
-                    <li>Privacy Policy</li>
-                    <li>GameGo Start Terms & Conditions</li>
-                    <li>Your Privacy Choices</li>
+                    <li><a href="#">CA Privacy Acts</a></li>
+                    <li><a href="#">CA Transparency Act</a></li>
+                    <li><a href="#">Conditions of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">GameGo Start Terms & Conditions</a></li>
+                    <li><a href="#">Your Privacy Choices</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h3>ABOUT US</h3>
                 <ul>
-                    <li>Accessibility</li>
-                    <li>Affiliates</li>
-                    <li>Careers</li>
-                    <li>Investors</li>
-                    <li>Game Informer</li>
+                    <li><a href="#">Accessibility</a></li>
+                    <li><a href="#">Affiliates</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Investors</a></li>
+                    <li><a href="#">Game Informer</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -91,11 +108,28 @@
                     <input id="footer-sign-up" type="text" placeholder="Enter your E-mail" name="signup" autocomplete="off">
                 </form>
                 <h3>GET THE APP</h3>
+                <div class="app-store-img">
+                    <img src="assets/images/download-on-the-app-store-badge.png" alt="apple app store link" />
+                    <img src="assets/images/download-on-the-google-store-badge.png" alt="google play store link" />
+                </div>
                 <h3>CONNECT WITH US</h3>
+                <div class="footer-connections">
+                    <i class="fa-brands fa-discord"></i>
+                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
             </div>
         </div>
         <div class="sub-footer">
             <p>&copy GAMEGO 2023</p>
+            <div class="footer-countries">
+                <a href="#">Oceania</a>
+                <a href="#">Northern America</a>
+                <a href="#">Baguette</a>
+                <a href="#">Germany</a>
+                <a href="#">Boot</a>
+            </div>
         </div>
     </footer>
     <script src="script.js"></script>
