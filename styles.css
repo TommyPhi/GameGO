@@ -7,18 +7,18 @@
 html {
     display: flex;
     overflow-x: hidden;
-    height: 100vh;
+    /* height: 100vh; */
+    font-family: Poppins;
 }
 
-body, html {
+body {
     margin: 0;
-    font-family: Poppins;
 }
 
 main {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: auto;
 }
 
 .brand-logo {
@@ -135,7 +135,7 @@ nav ul a:active {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-    margin-right: auto;
+    margin-right: 0;
   }
   
 .side-nav a {
@@ -162,7 +162,6 @@ nav ul a:active {
     top: 0;
     left: 30px;
     font-size: 20px;
-    margin-right: 50px;
 }
 
 .side-nav-btn {
