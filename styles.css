@@ -236,21 +236,27 @@ nav ul a:active {
     transition: all 0.5s;
 }
 
-.hero-image {
-    background-image: linear-gradient(to top right, rgba(115, 115, 115, 0.5) 0%, rgba(0,0,0, 0.80 ) 100%), url(assets/images/sm2-hero.jpeg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
+.hero {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    height: 600px;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 100px;
+    padding: 200px 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 5vh;
 }
 
-#heroVideo {
-    margin: -15rem 0 -45rem 0;
-    height: auto;
+.hero-video {
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .hero-text {
