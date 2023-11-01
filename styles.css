@@ -425,7 +425,7 @@ nav ul a:active {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: hsla(285, 42%, 33%, 1);
+    background: linear-gradient(90deg, hsla(330, 36%, 53%, 0.95) 0%, hsla(289, 68%, 19%, 0.95) 100%), url(assets/images/gamegostartbg.png);
     padding: 50px 300px 50px 300px;
     margin: 0 0 25px 0;
 }

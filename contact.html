@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameGO</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
     <header id="header">
@@ -17,7 +17,7 @@
                 </div>
                 <h1>Shop by Category</h1>
                 <div class="side-nav-links">
-                    <a href="#">Video Games</a>
+                    <a href="products.html">Video Games</a>
                     <a href="contact.html">Contact</a>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                 <div class="nav-wrapper">
                     <span class="side-nav-btn" onclick="openNav()">&#9776;</span>
                     <a href="index.html" class="brand-logo">Game<span id="brand-logo-go">Go</span></a>
-                    <form action="#">
+                    <form>
                         <div>
                             <input id="nav-search-bar" type="text" placeholder="Search games, consoles & more" name="search" autocomplete="off">
                         </div>
@@ -44,7 +44,39 @@
     </header>
 
     <main id="main">
-        <div id="products">
+        <h1>CONTACT US</h1>
+        <div class="contact-form">
+            <form id='contactForm'>
+                <div class="form-section">
+                    <label for="fname">FIRST NAME</label>
+                    <input type="text" name="fname" id="fname" autocomplete="off">
+                    <small>John/Jane</small>
+                </div>
+
+                <div class="form-section">
+                    <label for="lname">LAST NAME</label>
+                    <input type="text" name="lname" id="lname" autocomplete="off">
+                    <small>Doe</small>
+                </div>
+
+                <div class="form-section">
+                    <label for="email">EMAIL</label>
+                    <input type="text" name="email" id="email" autocomplete="off">
+                    <small>youremail@email.com</small>
+                </div>
+
+                <div class="form-section">
+                    <label for="pNumber">PHONE NUMBER</label>
+                    <input type="text" name="pNumber" id="pNumber" autocomplete="off">
+                    <small>###-###-####</small>
+                </div>
+
+                <div class="form-section">
+                    <label for="comments">COMMENTS</label>
+                    <textarea name="comments" id="comments"></textarea>
+                </div>
+                <button id="contact-submit">Submit</button>
+            </form>
         </div>
     </main>
 
@@ -113,8 +145,8 @@
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
-    <script src="component.js"></script>    
+    <script src="script.js" defer></script>
+    <script src="component.js"></script>
     <script src="https://kit.fontawesome.com/200f51f83e.js" crossorigin="anonymous"></script>
 </body>
 </html>

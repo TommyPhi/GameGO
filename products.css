@@ -7,7 +7,7 @@ main {
 #products {
     display: grid;
     grid-template-columns: repeat(4, 300px);
-    grid-template-rows: auto;
+    grid-template-rows: repeat(3, 610px);
     gap: 50px;
     margin: 100px 0;
 }
@@ -15,19 +15,34 @@ main {
 .game-item {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.game-info {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.main-game-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .game-item h1 {
+    font-size: 18pt;
+    line-height: 2.2rem;
+    text-align: center;
     margin: 0;
     padding: 0;
 }
 
-.game-item h1 {
-    font-size: 24pt;
-}
-
 .game-item h3 {
-    font-size: 12pt;
+    font-size: 9pt;
 }
 
 .game-item h2 {
@@ -49,4 +64,9 @@ main {
 .game-item img {
     width: 300px;
     height: auto;
+    margin-bottom: 20px;
+}
+
+.game-item button {
+    padding: 5px;
 }

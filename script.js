@@ -22,7 +22,7 @@ const database = [
     price: 69.99,
     releaseDate: 2022,
     image: 'assets/images/game-covers/godofwar5-cover.jpeg',
-    description: "God of War Ragnarök is an action-adventure game developed by Santa Monica Studio and published by Sony Interactive Entertainment. It was released worldwide on November 9, 2022, for both the PlayStation 4 and PlayStation 5, marking the first cross-gen release in the God of War series.",
+    description: "God of War Ragnarök, an action-adventure game by Santa Monica Studio, was released globally on November 9, 2022, marking the first cross-gen release in the God of War series.",
     genre: [genres[1], genres[3], genres[8]]
   },
 
@@ -58,7 +58,7 @@ const database = [
     price: 29.99,
     releaseDate: 2022,
     image: 'assets/images/game-covers/stray-cover.jpeg',
-    description: "Stray is a 2022 adventure game developed by BlueTwelve Studio and published by Annapurna Interactive. The story follows a stray cat who falls into a walled city populated by robots, machines, and mutant bacteria, and sets out to return to the surface with the help of a drone companion, B-12.",
+    description: "Stray is a 2022 adventure game starring a stray cat who escapes a walled city filled with robots, machines, and mutant bacteria using a drone companion, B-12.",
     genre: [genres[1], genres[2], genres[9]]
   },
 
@@ -70,7 +70,7 @@ const database = [
     price: 59.99,
     releaseDate: 2022,
     image: 'assets/images/game-covers/xenoblade3-cover.jpeg',
-    description: "Xenoblade Chronicles 3 is a 2022 action role-playing game developed by Monolith Soft and published by Nintendo for the Nintendo Switch. It is an installment in the open-world Xenoblade Chronicles series, itself a part of the larger Xeno franchise.",
+    description: "Xenoblade Chronicles 3, a 2022 Nintendo Switch action role-playing game, is part of the Xeno franchise and is an installment in the open-world Xenoblade Chronicles series.",
     genre: [genres[1], genres[3]]
   },
 
@@ -130,7 +130,7 @@ const database = [
     price: 59.99,
     releaseDate: 2023,
     image: 'assets/images/game-covers/re4remake-cover.jpeg',
-    description: "Resident Evil 4 is a 2023 survival horror game developed and published by Capcom. The game was released for PlayStation 4, PlayStation 5, Windows, and Xbox Series X/S on March 24, 2023. Versions for iOS, iPadOS and macOS are set for release later in 2023. It is a remake of the 2005 game Resident Evil 4.",
+    description: "Resident Evil 4, a 2023 Capcom survival horror game, is a remake of the 2005 game, released on March 24, 2023, with iOS, iPadOS, and macOS versions expected later in 2023.",
     genre: [genres[1], genres[2], genres[9], genres[11], genres[12]]
   },
 
@@ -142,7 +142,7 @@ const database = [
     price: 69.99,
     releaseDate: 2023,
     image: 'assets/images/game-covers/starfield-cover.jpeg',
-    description: "Starfield is an action role-playing game developed by Bethesda Game Studios and published by Bethesda Softworks. It was announced during Bethesda's E3 presentation in 2018. The game takes place in a space-themed setting, and is the first new intellectual property developed by Bethesda in 25 years.",
+    description: "Starfield, an action role-playing game developed by Bethesda Game Studios, is Bethesda's first new intellectual property in 25 years, set in a space-themed setting.",
     genre: [genres[0], genres[1], genres[3], genres[9]]
   }
 ]
@@ -153,16 +153,21 @@ function createGameItem(item) {
 
   gameItem.innerHTML = `
     <img src="${item.image}" alt="${item.name}">
-    <div class='game-info'>
+    <div class="game-info">
+    <div class='main-game-info'>
     <h1>${item.name}</h1>
     <h3>${item.publisher}</h3>
     <p>Release Date: ${item.releaseDate}</p>
-    <h2>Price: $${item.price}</h2>
+    <h2>$${item.price}</h2>
     </div>
     <p>${item.description}</p>
-    <div class='sub-game-info'>
+    <div>
     <p>Developer: ${item.developer}</p>
     <p>Genres: ${item.genre.join(', ')}</p>
+    <div>
+    <div class='buy-btn'>
+    <button>Buy Now</button>
+    </div>
     </div>
   `;
 
@@ -178,4 +183,4 @@ function displayGameItems() {
   });
 }
 
-window.onload = displayGameItems;
+// window.onload = displayGameItems;
