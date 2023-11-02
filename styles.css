@@ -9,7 +9,7 @@ html {
     height: 100%;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    width: 100%;
+    display: flex;
 }
 
 body {
@@ -17,6 +17,8 @@ body {
     position: relative;
     min-height: 100%;
     box-sizing: inherit;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
@@ -41,6 +43,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 nav {
@@ -52,10 +55,6 @@ nav {
     background-color: rgb(255, 255, 255);
     padding: 16px 0 0 0;
 }   
-
-nav ul {
-    padding: 0;
-}
 
 nav ul li {
     float: left;
@@ -316,6 +315,7 @@ nav ul a:active {
 .trending-overlay {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     width: 100%;
 }
@@ -543,7 +543,7 @@ footer {
 
     .nav-wrapper {
         flex-direction: column;
-        width: 100vw;
+        width: 100%;
     }
 
     .nav-wrapper .brand-logo {
