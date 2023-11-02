@@ -1,6 +1,7 @@
 //0         1                   2          3               4            5           6         7       8          9          10           11          12
 const genres = ['Action', 'Action-Adventure', 'Puzzle', 'Role-playing', 'Simulation', 'Strategy', 'Sports', 'MMO', 'Fighting', 'Shooter', 'Adventure', 'Survival', 'Horror'];
 
+// Object Database containing products
 const database = [
   {
     id: 1,
@@ -147,8 +148,10 @@ const database = [
   }
 ]
 
+// Product Number used to identify which product
 let product_num = 0;
 
+// Function that creates the card for each game.
 function createGameItem(item) {
   const gameItem = document.createElement('div');
   gameItem.classList.add('game-item');
@@ -177,6 +180,7 @@ function createGameItem(item) {
   return gameItem;
 }
 
+// Function that displays products it on HTML page
 function displayGameItems() {
   const gameList = document.getElementById('products');
 
@@ -186,6 +190,7 @@ function displayGameItems() {
   });
 }
 
+//Creates an array based on localStorage
 let cart = JSON.parse(localStorage.getItem('cart'));
 let cartList = [];
 if(cart!==null) {
@@ -196,6 +201,7 @@ if(cart!==null) {
   }
 }
 
+// Function that changes buy button text 
 function changeCartText(id) {
   const button = document.getElementById(id);
   button.innerHTML = 'Added to Cart';
@@ -206,6 +212,7 @@ function changeCartText(id) {
   }, 3000)
 }
 
+// Function that adds product to cart
 function addToCart(id) {
   const cartItem = (database.filter(item => item.id === id));
   if(localStorage.getItem('cart') == null) {
@@ -217,7 +224,10 @@ function addToCart(id) {
   localStorage.setItem('cart', JSON.stringify(old_cartItem));
 }
 
+//Initializes total price for cart
 let totalPrice = 0;
+
+// Function that creates each Cart item
 function createCartItem(item) {
   const cartItem = document.createElement('div');
   cartItem.classList.add('cart-item');
@@ -237,6 +247,7 @@ function createCartItem(item) {
   return cartItem;
 }
 
+// Function that displays each cart item
 function displayCartItems() {
   const cartDiv = document.getElementById('cartList');
 
@@ -246,11 +257,14 @@ function displayCartItems() {
   });
 };
 
+// Function that clears the cart and localStorage
 function resetCart() {
   totalPrice = 0;
   localStorage.clear();
   location.reload();
 }
+
+// Calls and loads functions
 window.onload = displayGameItems;
 displayCartItems();
 document.getElementById('totalPrice').innerHTML = `Total: $${Math.round(totalPrice * 100) / 100}`;

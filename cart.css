@@ -1,3 +1,4 @@
+/* Styles entire cart list */
 #cartList {
     display: flex;
     flex-direction: column;
@@ -5,31 +6,37 @@
     width: 100%;
 }
 
+/* Styles each cart item */
 .cart-item {
     display: flex;
     align-items: center;
     margin: 25px;
 }
 
+/* Sets the container for images */
 .cart-image-container {
     width: 100px;
     height: 100px;
 }
 
+/* Forces images to fit inside container */
 .cart-image-container img {
     max-width:100%;
     max-height:100%;
 }
 
+/* Styles the text in cart */
 .cart-info {
     line-height: 10px;
     margin-left: 50px;
 }
 
+/* Bolds the item price for emphasis */
 #item-price {
     font-weight: bold;
 }
 
+/* Styles the bottom content (reset and price) */
 #cartOptions {
     display: flex;
     width: 100%;
@@ -37,25 +44,25 @@
     align-items: center;
 }
 
+/* Styles the h2 tag in cartoptions */
 #cartOptions h2 {
     margin: 0 50px;
 }
 
+/* Styles the h2 tag in cart-info class */
 .cart-info h2 {
     width: 75%;
     line-height: 30px;
 }
 
-a {
-    text-decoration: none;
-}
-
+/* Styles the field set */
 fieldset {
     margin: 100px 0 50px 0;
     width: 100%;
     padding: 40px;
 }
 
+/* Styles the reset button */
 #cartOptions button {
     height: fit-content;
     background-color: rgb(237, 121, 121);

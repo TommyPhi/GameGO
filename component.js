@@ -1,9 +1,11 @@
+// Function that opens side navigation
 function openNav() {
     document.getElementById("sidenav").style.width = "350px";
     document.getElementById("sidenav").style.padding = "60px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
   }
   
+// Function that closes side navigation
 function closeNav() {
   document.getElementById("sidenav").style.width = "0";
   document.getElementById("sidenav").style.padding = "0";
@@ -33,6 +35,7 @@ window.onclick = function(event) {
   }
 }
 
+// Contact form validation
 let contact = document.getElementById('contactForm');
 contact.addEventListener("submit", (e) => {
   e.preventDefault();
