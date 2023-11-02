@@ -147,6 +147,8 @@ const database = [
   }
 ]
 
+let product_num = 0;
+
 function createGameItem(item) {
   const gameItem = document.createElement('div');
   gameItem.classList.add('game-item');
@@ -166,11 +168,12 @@ function createGameItem(item) {
     <p>Genres: ${item.genre.join(', ')}</p>
     <div>
     <div class='buy-btn'>
-    <button>Buy Now</button>
+    <button id="${product_num}" onclick="addToCart(${item.id}); changeCartText('${product_num}')">Buy Now</button>
     </div>
     </div>
   `;
 
+  product_num++;
   return gameItem;
 }
 
@@ -183,4 +186,71 @@ function displayGameItems() {
   });
 }
 
+let cart = JSON.parse(localStorage.getItem('cart'));
+let cartList = [];
+if(cart!==null) {
+  for(let value of cart) {
+    for(let subvalue of value) {
+      cartList.push(subvalue);
+    }
+  }
+}
+
+function changeCartText(id) {
+  const button = document.getElementById(id);
+  button.innerHTML = 'Added to Cart';
+  button.style.background = 'rgb(83, 168, 83)';
+  setTimeout(function() {
+    button.innerHTML = 'Buy Now';
+    button.style.background = 'rgb(237, 86, 81)';
+  }, 3000)
+}
+
+function addToCart(id) {
+  const cartItem = (database.filter(item => item.id === id));
+  if(localStorage.getItem('cart') == null) {
+    localStorage.setItem('cart', '[]');
+  }
+  var old_cartItem = JSON.parse(localStorage.getItem('cart'));
+  old_cartItem.push(cartItem);
+
+  localStorage.setItem('cart', JSON.stringify(old_cartItem));
+}
+
+let totalPrice = 0;
+function createCartItem(item) {
+  const cartItem = document.createElement('div');
+  cartItem.classList.add('cart-item');
+  totalPrice += item.price;
+  cartItem.innerHTML = `
+      <div class='cart-image-container'>
+        <img src="${item.image}" alt="${item.name}">
+      </div>
+      <div class="cart-info">
+        <h2>${item.name}</h2>
+        <p>${item.publisher}</p>
+        <p id="item-price">$${item.price}</p>
+      </div>
+      </div>
+  `;
+  document.getElementById('totalPrice').innerHTML = `Total: $${Math.round(totalPrice * 100) / 100}`;
+  return cartItem;
+}
+
+function displayCartItems() {
+  const cartDiv = document.getElementById('cartList');
+
+  cartList.forEach((item) => {
+    const cartItem = createCartItem(item);
+    cartDiv.appendChild(cartItem);
+  });
+};
+
+function resetCart() {
+  totalPrice = 0;
+  localStorage.clear();
+  location.reload();
+}
 window.onload = displayGameItems;
+displayCartItems();
+document.getElementById('totalPrice').innerHTML = `Total: $${Math.round(totalPrice * 100) / 100}`;

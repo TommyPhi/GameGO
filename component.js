@@ -75,7 +75,7 @@ contact.addEventListener("submit", (e) => {
     lNameValidation.innerHTML='Please enter your last name';
   } else {
     lNameInput.style.backgroundColor = "";
-    lNameValidation.innerHTML = "";
+    lNameValidation.innerHTML = '';
     validCounter++;
   }
 
@@ -105,7 +105,7 @@ contact.addEventListener("submit", (e) => {
 
   if(comments==="") {
     commentsInput.style.backgroundColor = 'rgb(232, 132, 132)';
-    commentsValidation.innerHTML='Please enter your last name';
+    commentsValidation.innerHTML='Please enter a comment';
   } else {
     commentsInput.style.backgroundColor = '';
     commentsValidation.innerHTML = "";
