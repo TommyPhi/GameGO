@@ -183,4 +183,4 @@ function displayGameItems() {
   });
 }
 
-// window.onload = displayGameItems;
+window.onload = displayGameItems;

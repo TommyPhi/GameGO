@@ -70,3 +70,25 @@ main {
 .game-item button {
     padding: 5px;
 }
+
+@media screen and (max-width: 480px) {
+    #products {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    #products {
+        grid-template-columns: repeat(3, auto);
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1279px) {
+    /* #heroVideo {
+        margin: 0 0 -24rem 0;
+    }
+    
+    .hero-text {
+        margin: -33rem 0 0 0;
+    } */
+}
